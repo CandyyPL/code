@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Wiedźmińska Alchemia - Odwary</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="Spis, recepty i właściwości wszystkich eliksirów, odwarów i innych chemikaliów z gry Wiedźmin 3 Dziki Gon">
+        <meta name="keywords" content="wiedźmin, candyy, witcher, 3, wild hunt, dziki gon, elixir, eliksir, odwar, olej">
+
+        <link rel="stylesheet" href="style/style.css" type="text/css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
+    </head>
+    <body>
+        <div class="logo">
+            <a href="index.html">
+                <i class="icon-glass"></i>
+                <span class="logo__text">Wiedźmińska Alchemia</span>
+                <i class="icon-glass"></i>
+            </a>
+        </div>
+        <div class="wrapper">
+            <div class="sidebar">
+                <ul class="list">
+                    <h1>Spis treści</h1>
+                    <a href="eliksir.html"><li class="list__item">Eliksiry</li></a>
+                    <a href="odwar.html"><li class="list__item">Odwary</li></a>
+                    <a href="olej.html"><li class="list__item">Oleje</li></a>
+                    <a href="petarda.html"><li class="list__item">Petardy</li></a>
+                </ul>
+            </div>
+            <main>
+                <div class="main__text">
+                    <h1>Odwary</h1>
+                    <input type="search" id="search_bar" name="search_bar" placeholder="Wyszukaj odwar">
+                    <h4 id="hide"></h4>
+                </div>
+                <div class="main__content">
+                    <!-- ===== POCZĄTEK LISTY ===== -->
+                    <div class="main__content__item" name="Odwar łagodziciela">
+                        <div class="main__content__item__image">
+                            <img src="img/icons/odwar/odwar_lagodziciela.png" alt="Odwar łagodziciela">
+                        </div>
+                        <div class="main__content__item__info">
+                            <h1>
+                                <p class="h1__text">
+                                    <a href="#">Odwar łagodziciela</a>
+                                </p>
+                            </h1>
+                            <p class="desc">Zwiększa obrażenia zadawane upiorom i zmniejsza obrażenia od ataków upiorów.</p>
+                            <div class="info">
+                                <p class="time">Czas trwania: 1800 sekund ( 30 minut )</p>
+                                <p class="toxicity">Toksyczność: 70</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__content__item" name="Odwar z Alghula">
+                        <div class="main__content__item__image">
+                            <img src="img/icons/odwar/odwar_z_alghula.png" alt="Odwar z Alghula">
+                        </div>
+                        <div class="main__content__item__info">
+                            <h1>
+                                <p class="h1__text">
+                                    <a href="#">Odwar z Alghula</a>
+                                </p>
+                            </h1>
+                            <p class="desc">Punkty Adrenaliny w walce generowane są szybciej niż normalnie, aż do otrzymania pierwszego ciosu.</p>
+                            <div class="info">
+                                <p class="time">Czas trwania: 1800 sekund ( 30 minut )</p>
+                                <p class="toxicity">Toksyczność: 70</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===== KONIEC LISTY ===== -->
+                </div>
+            </main>
+        </div>
+
+        <script defer src="search.js"></script>
+    </body>
+</html>

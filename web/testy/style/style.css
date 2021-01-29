@@ -1,0 +1,82 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #808080;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rectangle {
+  width: 250px;
+  height: 250px;
+  background-color: #ddd;
+  cursor: pointer;
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  border-radius: 50px;
+  margin-top: 100px;
+}
+
+.move {
+  -webkit-transform: translateX(500px);
+          transform: translateX(500px);
+  background-color: #222;
+}
+
+.bt {
+  border: 0;
+  margin: 0;
+  width: 250px;
+  height: 65px;
+  margin-top: 200px;
+  font-size: 30px;
+  font-family: 'Baloo 2', cursive;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.bt:focus {
+  outline: none;
+}
+
+.bt:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  text-shadow: 0px 0px 10px white;
+}
+
+.bt::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: #222;
+  bottom: 5px;
+  left: 25%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.bt:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+/*# sourceMappingURL=style.css.map */

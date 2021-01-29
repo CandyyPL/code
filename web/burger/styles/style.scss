@@ -1,0 +1,130 @@
+$dark: #222;
+$light: #eee;
+
+body{
+    background-color: $dark;
+    padding: 10px;
+}
+
+.hamburger{
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0;
+    border: 0;
+    display: inline-block;
+}
+
+.hamburger:focus{outline: none}
+
+.hamburger-active{transform: translateX(250px)}
+
+.hamburger, .nav{transition: transform .4s}
+
+.hamburger-box{
+    width: 35px;
+    height: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+@mixin hamburger-line{
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: $light;
+    left: 0;
+}
+
+.hamburger-inner{
+    @include hamburger-line;
+    top: 50%;
+    transition: background-color .3s;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after{
+    @include hamburger-line;
+    content: '';
+    transition: transform .3s;
+}
+
+.hamburger-inner::before{top: -10px}
+.hamburger-inner::after{top: 10px}
+
+.hamburger-active .hamburger-inner{
+    background-color: transparent;
+}
+
+.hamburger-active .hamburger-inner::before{
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-active .hamburger-inner::after{
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.nav{
+    width: 250px;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $light;
+    transform: translateX(-250px);
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list{
+    margin-top: 50px;
+    padding: 0;
+    width: 200px;
+    list-style: none;
+}
+
+.nav-item{
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    a{
+        text-decoration: none;
+        color: $dark;
+        font-family: 'Baloo 2', cursive;
+
+        p{
+            width: 65%;
+            height: 50px;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            transition: all .3s;
+        }
+
+        p:hover{
+            transform: translateY(-8px);
+            text-shadow: 1px 1px 10px black;
+        }
+
+        p::before{
+            width: 75%;
+            height: 2px;
+            position: absolute;
+            left: 12.5%;
+            bottom: 5px;
+            background-color: $dark;
+            content: '';
+            transform: scaleX(0);
+            transition: transform .3s;
+        }
+
+        p:hover::before{
+            transform: scaleX(1);
+        }
+    }
+}
+
+.nav-active{
+    transform: translateX(0);
+}

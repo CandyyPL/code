@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+}
+
+#motto{
+    font-size: 70px;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 2px;
+    color: #eef;
+    text-align: center;
+    height: 200px;
+    width: 800px;
+    margin: 60px auto 0 auto;
+}
+
+#clock{
+    height: 450px;
+    width: 450px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 35px;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 50%;
+    border: 6px solid black;
+    margin: 0 auto;
+    position: relative;
+}
+
+#clock .number{
+    --rotation: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+#clock .number1{ --rotation: 30deg;}
+#clock .number2{ --rotation: 60deg;}
+#clock .number3{ --rotation: 90deg;}
+#clock .number4{ --rotation: 120deg;}
+#clock .number5{ --rotation: 150deg;}
+#clock .number6{ --rotation: 180deg;}
+#clock .number7{ --rotation: 210deg;}
+#clock .number8{ --rotation: 240deg;}
+#clock .number9{ --rotation: 270deg;}
+#clock .number10{ --rotation: 300deg;}
+#clock .number11{ --rotation: 330deg;}
+
+#clock .hand{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 8;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+#clock::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+#clock .hand.second{
+    width: 4px;
+    height: 45%;
+    background-color: red;
+}
+
+#clock .hand.minute{
+    width: 7px;
+    height: 40%;
+    background-color: black;
+}
+
+#clock .hand.hour{
+    width: 10px;
+    height: 25%;
+    background-color: black;
+}
+
+#go-main-button{
+    height: 80px;
+    width: 350px;
+    margin: 80px auto 0 auto;
+}
+
+#go-main{
+    height: 80px;
+    width: 350px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-size: 26px;
+    letter-spacing: 1px;
+    transition: all ease 0.2s;
+    border: none;
+}
+
+#go-main:hover{
+    background-color: #111;
+    color: #eef;
+}
+
+#go-main:focus{outline: none}
