@@ -1,0 +1,134 @@
+body {
+  background-color: #222;
+  padding: 10px;
+}
+
+.hamburger {
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.hamburger-box {
+  width: 35px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  width: 100%;
+  height: 4px;
+  background-color: #eee;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 100%;
+  height: 4px;
+  background-color: #eee;
+  position: absolute;
+  content: '';
+  left: 0;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  top: 10px;
+}
+
+.hamburger-active .hamburger-inner {
+  background-color: transparent;
+}
+
+.hamburger-active .hamburger-inner::before {
+  -webkit-transform: translateY(10px) rotate(45deg);
+          transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-active .hamburger-inner::after {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+          transform: translateY(-10px) rotate(-45deg);
+}
+
+#clock {
+  width: 1200px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #eee;
+  font-size: 200px;
+  text-align: center;
+  padding: 25px;
+  font-family: 'Kanit', sans-serif;
+}
+
+#form {
+  width: 400px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+#result {
+  width: 400px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  font-family: 'Baloo Chettan 2', cursive;
+}
+
+input[type=text] {
+  width: 380px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-size: 28px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type=submit] {
+  width: 380px;
+  height: 50px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-size: 28px;
+  border-radius: 10px;
+  border: none;
+}
+
+input[type=submit]:hover {
+  background-color: darkgray;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

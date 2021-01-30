@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Wiedźmińska Alchemia - Oleje</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="Spis, recepty i właściwości wszystkich eliksirów, odwarów i innych chemikaliów z gry Wiedźmin 3 Dziki Gon">
+        <meta name="keywords" content="wiedźmin, candyy, witcher, 3, wild hunt, dziki gon, elixir, eliksir, odwar, olej">
+
+        <link rel="stylesheet" href="style/style.css" type="text/css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
+    </head>
+    <body>
+        <div class="logo">
+            <a href="index.html">
+                <i class="icon-glass"></i>
+                <span class="logo__text">Wiedźmińska Alchemia</span>
+                <i class="icon-glass"></i>
+            </a>
+        </div>
+        <div class="wrapper">
+            <div class="sidebar">
+                <ul class="list">
+                    <h1>Spis treści</h1>
+                    <a href="eliksir.html"><li class="list__item">Eliksiry</li></a>
+                    <a href="odwar.html"><li class="list__item">Odwary</li></a>
+                    <a href="olej.html"><li class="list__item">Oleje</li></a>
+                    <a href="petarda.html"><li class="list__item">Petardy</li></a>
+                </ul>
+            </div>
+            <main>
+                <div class="main__text">
+                    <h1>Oleje</h1>
+                    <input type="search" id="search_bar" name="search_bar" placeholder="Wyszukaj olej">
+                    <h4>Wybierz, aby zobaczyć stopnie ulepszenia</h4>
+                </div>
+                <div class="main__content">
+                    <!-- ===== POCZĄTEK LISTY ===== -->
+                    <div class="main__content__item">
+                        <div class="main__content__item__image">
+                            <img src="img/icons/olej/jad_wisielcow.png" alt="Jad wisielców">
+                        </div>
+                        <div class="main__content__item__info" name="Jad wisielców">
+                            <h1>
+                                <p class="h1__text">
+                                    <a href="#">Jad wisielców</a>
+                                </p>
+                            </h1>
+                            <p class="desc">+10% Siła ataku przeciw humanoidom</p>
+                            <div class="info">
+                                <p class="charge">Ładunki: 20</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__content__item" name="Olej przeciw drakonidom">
+                        <div class="main__content__item__image">
+                            <img src="img/icons/olej/olej_przeciw_drakonidom.png" alt="Olej przeciw drakonidom">
+                        </div>
+                        <div class="main__content__item__info">
+                            <h1>
+                                <p class="h1__text">
+                                    <a href="#">Olej przeciw drakonidom</a>
+                                </p>
+                            </h1>
+                            <p class="desc">+10% Siła ataku przeciw drakonidom</p>
+                            <div class="info">
+                                <p class="charge">Ładunki: 20</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===== KONIEC LISTY ===== -->
+                </div>
+            </main>
+        </div>
+
+        <script defer src="search.js"></script>
+    </body>
+</html>
